@@ -11,7 +11,6 @@
 body {
   background: #1b1717;
   font-family: "Montserrat", sans-serif;
-  height: 100dvh;
 }
 
 /* Header */
@@ -20,10 +19,16 @@ body {
   height: 200px;
 
   object-fit: cover;
-  object-position: bottom;
+  object-position: 50% 90%;
 }
 
-/* Main */
+/* Header For Phone */
+@media (max-width: 576px) {
+  #header_image {
+    height: 150px;
+  }
+}
+
 /* Profile Image */
 #profile_image {
   text-align: center;
@@ -34,6 +39,13 @@ body {
   margin-top: -85px;
   border-radius: 25%;
   outline: 5px solid #1b1717;
+}
+
+/* Profile Image For Phone*/
+@media (max-width: 576px) {
+  #profile_image img {
+    width: 120px;
+  }
 }
 
 /* Personel Profile */
@@ -110,6 +122,7 @@ body {
   background-color: #810000;
 }
 
+/* Button Link For Phone */
 @media (max-width: 576px) {
   .wrapper_button_link {
     padding: 0px 10%;
@@ -122,12 +135,14 @@ body {
   }
 }
 
+/* Button Link For Tablet */
 @media (min-width: 768px) {
   .wrapper_button_link {
     padding: 0px 20%;
   }
 }
 
+/* Button Link For Dekstop */
 @media (min-width: 992px) {
   .wrapper_button_link {
     padding: 0px 30%;
