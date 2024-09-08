@@ -13,7 +13,6 @@
 body {
   background: #1b1717;
   font-family: "Plus Jakarta Sans", sans-serif;
-  height: 200vh;
 }
 
 /* Header */
@@ -99,7 +98,6 @@ body {
   background-color: white;
   border-radius: 20px;
   padding: 16px;
-  border: 2px solid white;
   transition: 0.3s ease-in-out;
 }
 
@@ -110,7 +108,6 @@ body {
 .button_link:hover {
   color: white;
   background-color: #ce1212;
-  border: 2px solid white;
 }
 
 .button_link p {
@@ -130,7 +127,7 @@ footer {
   padding: 12px 0px;
   text-align: center;
   background-color: #1b1717;
-  opacity: 75%;
+  opacity: 50%;
 }
 
 footer img {
