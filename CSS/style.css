@@ -1,23 +1,25 @@
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
-/* Root */
+/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* Body */
 body {
   background: #1b1717;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 200vh;
 }
 
 /* Header */
 #header_image {
   width: 100%;
   height: 200px;
-
   object-fit: cover;
   object-position: 50% 90%;
 }
@@ -29,34 +31,20 @@ body {
   }
 }
 
-/* Profile Image */
-#profile_image {
+/* Profile */
+#profile {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-#profile_image img {
+#profile-image {
   width: 160px;
   margin-top: -85px;
   border-radius: 25%;
   outline: 5px solid #1b1717;
-}
-
-/* Profile Image For Phone*/
-@media (max-width: 576px) {
-  #profile_image img {
-    width: 120px;
-  }
-}
-
-/* Personel Profile */
-#profile {
-  color: white;
-
-  display: grid;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
 }
 
 #profile h1 {
@@ -74,98 +62,128 @@ body {
 }
 
 /* Social Media */
-#sosial_media {
+#sosial-media {
   display: flex;
   justify-content: center;
-
-  margin: 24px 0px 36px 0px;
+  margin: 16px 0px 32px;
 }
 
-#sosial_media a {
+#sosial-media a {
+  text-decoration: none;
   padding: 0 5px;
-}
-
-#sosial_media a {
-  font-size: 16px;
+  font-size: 20px;
   color: white;
-
   padding: 0px 12px;
-
   transition: 0.2s ease-in;
 }
 
-#sosial_media a:hover {
-  color: #810000;
+#sosial-media a:hover {
+  color: #ce1212;
 }
 
 /* Button Link */
-.wrapper_button_link {
-  display: grid;
+.wrapper-button-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.wrapper_button_link a {
-  margin-bottom: 15px;
-  padding: 12px;
-
-  color: white;
-  font-weight: 600;
-  text-align: center;
+.button_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
+  color: black;
+  width: 80%;
+  max-width: 40rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
+}
 
+.button_link:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.button_link:hover {
+  color: white;
   background-color: #ce1212;
-  border-radius: 10px;
-
-  transition: 0.2s ease-in;
+  border: 2px solid white;
 }
 
-.wrapper_button_link a:hover {
-  background-color: #810000;
+.button_link p {
+  font-weight: 600;
 }
 
-/* Button Link For Phone */
-@media (max-width: 576px) {
-  .wrapper_button_link {
-    padding: 0px 10%;
-  }
-}
-
-@media (min-width: 577px) {
-  .wrapper_button_link {
-    padding: 0px 15%;
-  }
-}
-
-/* Button Link For Tablet */
-@media (min-width: 768px) {
-  .wrapper_button_link {
-    padding: 0px 20%;
-  }
-}
-
-/* Button Link For Dekstop */
-@media (min-width: 992px) {
-  .wrapper_button_link {
-    padding: 0px 30%;
-  }
+.button_link p > i {
+  padding-right: 8px;
 }
 
 /* Footer */
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-
   padding: 12px 0px;
   text-align: center;
-
   background-color: #1b1717;
-  border-top: 4px solid #ce1212;
+  opacity: 75%;
+}
+
+footer img {
+  width: 32px;
+  padding-bottom: 4px;
 }
 
 footer P {
   color: white;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 16px;
+  padding: 16px;
+  animation: animationtoast 400ms ease-in-out;
+}
+
+@keyframes animationtoast {
+  from {
+    opacity: 0;
+    transform: translateY(-64px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-gone {
+  animation: gone 2s ease-in-out 2s;
+}
+
+@keyframes gone {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Website 404 */

@@ -6,56 +6,75 @@
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css" />
 
-    <!-- Bootstap Icon - CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <title>Andreas | Link In Bio</title>
   </head>
   <body>
-    <!-- Header Start -->
     <header>
       <img src="IMG/header_image.jpg" alt="Desk Setup" id="header_image" />
     </header>
-    <!-- Header End -->
 
-    <!-- Main Start -->
     <main>
-      <div id="profile_image">
-        <img src="IMG/profile_image.jpg" alt="Andreas" />
-      </div>
-
+      <!-- Profile -->
       <div id="profile">
+        <img id="profile-image" src="IMG/profile_image.jpg" alt="Andreas" />
         <h1>Andreas</h1>
         <p class="status">Student - Gamer</p>
       </div>
 
-      <div id="sosial_media">
+      <div id="sosial-media">
         <a href="https://www.instagram.com/andreas.andreas25/" target="_blank"
-          ><i class="bi bi-instagram"></i
+          ><i class="ph ph-instagram-logo"></i></i
         ></a>
         <a href="https://www.tiktok.com/@andreasteknik" target="_blank"
-          ><i class="bi bi-tiktok"></i
+          ><i class="ph ph-tiktok-logo"></i></i
         ></a>
         <a href="https://x.com/AndreasMaiken" target="_blank"
-          ><i class="bi bi-twitter-x"></i
+          ><i class="ph ph-x-logo"></i></i
         ></a>
         <a href="https://github.com/AndreasInformatika25" target="_blank"
-          ><i class="bi bi-github"></i
+          ><i class="ph ph-github-logo"></i></i
         ></a>
       </div>
 
-      <div class="wrapper_button_link">
-        <a href="website/404.html">Website Portfolio</a>
-        <a href="website/404.html">Personal Website</a>
-        <a href="website/404.html">Peripheral On Setup</a>
+      <div class="wrapper-button-link">
+        <a href="website/404.html" target="_blank" class="button_link">
+          <span></span>
+          <p><i class="ph ph-certificate"></i>Portfolio Website</p>
+          <div class="copy-link-action">
+            <i class="ph ph-copy-simple"></i>
+          </div>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="button_link">
+          <span></span>
+          <p><i class="ph ph-desktop-tower"></i>Website Andreas Computer</p>
+          <div class="copy-link-action">
+            <i class="ph ph-copy-simple"></i>
+          </div>
+        </a>
+        <a href="https://google.com" target="_blank" class="button_link">
+          <span></span>
+          <p><i class="ph ph-keyboard"></i>Peripherals Setup</p>
+          <div class="copy-link-action">
+            <i class="ph ph-copy-simple"></i>
+          </div>
+        </a>
       </div>
     </main>
+
+
     <footer>
+      <img src="IMG/logo.png" alt="Andreas Logo">
       <p>Made By Andreas</p>
     </footer>
+
+    <!-- Toast Notifaction -->
+    <div id="toast" class="toast-container"></div>
+
+    <!-- Script -->
+     <script src="JS/script.js"></script>
     <!-- Main End -->
   </body>
 </html>
