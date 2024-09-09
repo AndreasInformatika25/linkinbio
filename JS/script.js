@@ -6,7 +6,7 @@ copyButton.forEach((copy) => {
     navigator.clipboard.writeText(copy.parentElement.getAttribute("href"));
     document.getElementById("toast").innerHTML = `
     <div class="toast">
-        <p>✅ Link Berhasil Disalin</p>
+        <p>✅ Link <strong>${copy.parentElement.innerText} Berhasil Disalin</p>
     </div>`;
     setTimeout(() => {
       document.querySelector("#toast .toast").classList.add("toast-gone");
@@ -16,4 +16,10 @@ copyButton.forEach((copy) => {
       document.querySelector("#toast .toast").remove();
     }, 4000);
   });
+});
+
+document.addEventListener("scroll", (e) => {
+  document.querySelector(
+    ".bg-text-animation"
+  ).style.transform = `translateX(${window.scrollY}px)`;
 });
